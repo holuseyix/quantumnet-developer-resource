@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="An independent, source-first developer resource for understanding Tezos Quantumnet and its experimental post-quantum architecture.">
+  <meta property="og:title" content="Quantumnet Developer Resource">
+  <meta property="og:description" content="Understand the post-quantum Tezos experiment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://holuseyix.github.io/-quantumnet-developer-resource/">
+  <title>Quantumnet Developer Resource</title>
+  <link rel="canonical" href="https://holuseyix.github.io/-quantumnet-developer-resource/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Quantumnet Developer Resource home">
+        <span class="brand-mark">Q</span>
+        <span>QUANTUMNET</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#contribute">Contribute</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top">
+      <div class="eyebrow">INDEPENDENT DEVELOPER RESOURCE · 2026</div>
+      <h1>Understand the<br><span>post-quantum</span> Tezos experiment.</h1>
+      <p class="hero-copy">A practical, source-first guide to Quantumnet — what changed, why it changed, and where developers can start exploring.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#architecture">Explore architecture <span>→</span></a>
+        <a class="button secondary" href="https://spotlight.tezos.com/introducing-quantumnet/" target="_blank" rel="noopener noreferrer">Read official announcement ↗</a>
+      </div>
+      <div class="notice"><strong>Independent resource.</strong> Not official Tezos documentation. Built from primary sources for learning, verification and contribution.</div>
+    </section>
+
+    <section class="container section" id="overview">
+      <div class="section-kicker">01 · THE EXPERIMENT</div>
+      <div class="section-heading">
+        <h2>One testnet.<br>Several cryptographic changes.</h2>
+        <p>Quantumnet brings multiple post-quantum approaches together so they can be developed and evaluated in one environment.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Accounts</h3>
+          <p><code>tz5</code> accounts use <strong>ML-DSA-44</strong> for post-quantum signatures.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Consensus</h3>
+          <p>Consensus attestations use <strong>XMSS</strong> with a post-quantum <strong>STARK aggregation</strong> system.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Baking rights</h3>
+          <p>The experimental network replaces the VDF/randomness approach with <strong>SWRR</strong>.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Data availability</h3>
+          <p>The DAL replaces <strong>KZG</strong> with <strong>ZODA</strong> in this experiment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="architecture section" id="architecture">
+      <div class="container">
+        <div class="section-kicker">02 · INTERACTIVE MAP</div>
+        <div class="section-heading">
+          <h2>Quantumnet architecture</h2>
+          <p>Select a component to see the role it plays in the experimental network.</p>
+        </div>
+
+        <div class="explorer">
+          <div class="explorer-nav" role="tablist" aria-label="Quantumnet components">
+            <button class="tab active" role="tab" aria-selected="true" data-key="quantumnet">QUANTUMNET</button>
+            <button class="tab" role="tab" aria-selected="false" data-key="accounts">TZ5 / ML-DSA-44</button>
+            <button class="tab" role="tab" aria-selected="false" data-key="consensus">XMSS + PQ STARK</button>
+            <button class="tab" role="tab" aria-selected="false" data-key="baking">SWRR</button>
+            <button class="tab" role="tab" aria-selected="false" data-key="dal">ZODA</button>
+          </div>
+
+          <div class="explorer-panel" aria-live="polite">
+            <div class="panel-label">SELECTED COMPONENT</div>
+            <h3 id="panel-title">Quantumnet</h3>
+            <p id="panel-copy">An experimental Tezos testnet that brings several post-quantum approaches together for evaluation.</p>
+            <div class="panel-meta" id="panel-meta">EXPERIMENTAL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section compact">
+      <div class="section-kicker">03 · WHAT TO KNOW</div>
+      <div class="warning">
+        <div class="warning-icon">!</div>
+        <div>
+          <h2>Experimental means experimental.</h2>
+          <p>Quantumnet is an engineering playground, not a production network. The official announcement says its UX is intentionally limited and that the current focus is integrating and evaluating core components.</p>
+          <p>Future iterations may change security analysis, performance, functionality and tooling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="contribute">
+      <div class="section-kicker">04 · CONTRIBUTOR PATH</div>
+      <div class="section-heading">
+        <h2>Start useful.<br>Then go deeper.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><div><h3>Read</h3><p>Start with the official Quantumnet announcement and Octez documentation.</p></div></div>
+        <div class="step"><span>02</span><div><h3>Map</h3><p>Use this explorer to understand which mechanism belongs to which layer.</p></div></div>
+        <div class="step"><span>03</span><div><h3>Verify</h3><p>Check the current Tezos/tezos GitLab before making implementation claims.</p></div></div>
+        <div class="step"><span>04</span><div><h3>Contribute</h3><p>Consider documentation, testing, reproducibility or narrowly scoped improvements.</p></div></div>
+        <div class="step"><span>05</span><div><h3>Discuss</h3><p>Ask contributors whether a proposed improvement is useful before treating it as an official task.</p></div></div>
+      </div>
+      <div class="links-row">
+        <a href="https://octez.tezos.com/" target="_blank" rel="noopener noreferrer">Octez documentation ↗</a>
+        <a href="https://gitlab.com/tezos/tezos" target="_blank" rel="noopener noreferrer">Tezos GitLab ↗</a>
+      </div>
+    </section>
+
+    <section class="sources section" id="sources">
+      <div class="container">
+        <div class="section-kicker">05 · PRIMARY SOURCES</div>
+        <div class="section-heading">
+          <h2>Verify, don't just trust.</h2>
+          <p>The resource is designed around primary sources. Check the current source before relying on an experimental detail.</p>
+        </div>
+        <div class="source-list">
+          <a href="https://spotlight.tezos.com/introducing-quantumnet/" target="_blank" rel="noopener noreferrer"><span>01</span><strong>Introducing Quantumnet</strong><small>Tezos Spotlight · Sep 24, 2026 ↗</small></a>
+          <a href="https://spotlight.tezos.com/why-post-quantum-why-now/" target="_blank" rel="noopener noreferrer"><span>02</span><strong>Why post-quantum, why now?</strong><small>Tezos Spotlight ↗</small></a>
+          <a href="https://octez.tezos.com/" target="_blank" rel="noopener noreferrer"><span>03</span><strong>Octez &amp; Protocol Documentation</strong><small>Official technical documentation ↗</small></a>
+          <a href="https://gitlab.com/tezos/tezos" target="_blank" rel="noopener noreferrer"><span>04</span><strong>Tezos / tezos</strong><small>GitLab source repository ↗</small></a>
+          <a href="https://gitlab.com/tezos/tezos/-/milestones/498" target="_blank" rel="noopener noreferrer"><span>05</span><strong>Post-Quantum Signature Aggregation</strong><small>Experimental milestone ↗</small></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>QUANTUMNET DEVELOPER RESOURCE</strong><span>Independent community project · 2026</span></div>
+      <span>Built for learning, verification and contribution.</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

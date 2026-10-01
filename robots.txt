@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://holuseyix.github.io/-quantumnet-developer-resource/sitemap.xml
